@@ -1,0 +1,33 @@
+.container{
+    text-align: right ;
+    
+    margin-top: -855px;
+    padding-left: 163px;
+    margin-inline-end: 200px;
+}
+.demo{
+    text-align: right;
+    margin-top: 2px;
+    float: right;
+    width: 700px;
+    padding-right: 66px;
+    margin-top: 49px;
+}
+h4{
+    text-align: right;
+    color: red;
+    margin-right: 367px;
+}
+a{
+    color: red;
+}
+h6{
+    margin-right: 117px;
+}
+p{
+    margin-right: 213px;
+}
+small{
+    margin-right: 200px;
+    padding-bottom: 25px;
+}
