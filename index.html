@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <section>
+        <div class="contentBox">
+            <div class="formBox">
+                <h2 class="login">Registration</h2>
+                <form>
+                    <div class="inputBox">
+                        <input type="text" name="firstName" id="firstName" placeholder="Enter Your First Name"
+                            size="30">
+                        <div id="firstNameHelpDiv"></div>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="lastName" id="lastName" placeholder="Enter Your Last Name" size="30">
+                        <div id="lastNameHelpDiv"></div>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email ID">
+                        <div id="emailHelpDiv"></div>
+                    </div>
+                    <div class="inputBox">
+                        <input type="phone" name="phone" id="phone" placeholder="Enter Your Mobile Number">
+                        <div id="phoneHelpDiv"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="firstNameHelpDiv">
+            Your fisrt name as it appears in passport
+    </div>
+    
+    <div id="lastNameHelpDiv">
+            Your last name as it appears in passport
+    </div>
+    
+    <div id="emailHelpDiv">
+            Your email address for communication
+    </div>
+    
+    <div id="phoneHelpDiv">
+            Your Working Mobile Number
+    </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var textBoxes = $('input');
+            textBoxes.focus(function () {
+                var helpDiv = $(this).attr('id') + 'HelpDiv';
+                $('#' + helpDiv).load('help.html #' + helpDiv);
+            });
+
+            textBoxes.blur(function () {
+                var helpDiv = $(this).attr('id') + 'HelpDiv';
+                $('#' + helpDiv).html('');
+            });
+        });
+    </script>
+    
+</body>
+</html>
